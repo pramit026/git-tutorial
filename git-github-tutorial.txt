@@ -1,0 +1,2556 @@
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ touch names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        names.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   names.txt
+
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git commit -m "names.txt file added"
+[master (root-commit) 90d5472] names.txt file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ vi names.txt
+
+[1]+  Stopped                 vi names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ vi names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ vi names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ cat names.txt
+Pramit Sahoo
+Git Tutorial
+Github
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .names.txt.swp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add .
+warning: LF will be replaced by CRLF in names.txt.
+The file will have its original line endings in your working directory
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git restore --staged names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add .
+warning: LF will be replaced by CRLF in names.txt.
+The file will have its original line endings in your working directory
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   names.txt
+
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git commit -m "names.txt file modified"
+[master 1651562] names.txt file modified
+ 1 file changed, 3 insertions(+)
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git log
+commit 1651562663d87b78dbb530611e36f309cd385c9b (HEAD -> master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:01:13 2022 +0530
+
+    names.txt file modified
+
+commit 90d5472f318b4dfac4d1bbd8be1052e65d6a6936
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 12:51:34 2022 +0530
+
+    names.txt file added
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ rm -rf names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git commit -m "names.txt deleted"
+[master fe478ee] names.txt deleted
+ 1 file changed, 3 deletions(-)
+ delete mode 100644 names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git log
+commit fe478ee58461cbac2695ab108c25b9672a9d5c55 (HEAD -> master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:04:33 2022 +0530
+
+    names.txt deleted
+
+commit 1651562663d87b78dbb530611e36f309cd385c9b
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:01:13 2022 +0530
+
+    names.txt file modified
+
+commit 90d5472f318b4dfac4d1bbd8be1052e65d6a6936
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 12:51:34 2022 +0530
+
+    names.txt file added
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git reset 90d5472f318b4dfac4d1bbd8be1052e65d6a6936
+Unstaged changes after reset:
+D       names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git log
+commit 90d5472f318b4dfac4d1bbd8be1052e65d6a6936 (HEAD -> master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 12:51:34 2022 +0530
+
+    names.txt file added
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ touch surnames.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        surnames.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add .
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> surnames.txt
+
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ vi surnames.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ touch houses.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add .
+warning: LF will be replaced by CRLF in surnames.txt.
+The file will have its original line endings in your working directory
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    names.txt -> houses.txt
+        new file:   surnames.txt
+
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git stash
+Saved working directory and index state WIP on master: 90d5472 names.txt file added
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git log
+commit 90d5472f318b4dfac4d1bbd8be1052e65d6a6936 (HEAD -> master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 12:51:34 2022 +0530
+
+    names.txt file added
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ cat names.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git stash pop
+Removing names.txt
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   houses.txt
+        new file:   surnames.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    names.txt
+
+Dropped refs/stash@{0} (202fbc17fd19be73a1106aba02c15d1dbba64fa7)
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add .
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git stash
+Saved working directory and index state WIP on master: 90d5472 names.txt file added
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git stash clear
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git remote add origin https://github.com/pramit026/git-tutorial.git
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git remote -v
+origin  https://github.com/pramit026/git-tutorial.git (fetch)
+origin  https://github.com/pramit026/git-tutorial.git (push)
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 214 bytes | 3.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/pramit026/git-tutorial/pull/new/master
+remote:
+To https://github.com/pramit026/git-tutorial.git
+ * [new branch]      master -> master
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/pramit026/git-tutorial.git'
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ touch hotels.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add .
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git commit -m "hotels.txt added "
+[master 957b9f1] hotels.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hotels.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ touch rollno.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add .
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git commit -m "roll no added "
+[master ec177dc] roll no added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 rollno.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ vi rollno.txt
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   rollno.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git add .
+warning: LF will be replaced by CRLF in rollno.txt.
+The file will have its original line endings in your working directory
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git commit -m "roll no modified"
+[master 31dc539] roll no modified
+ 1 file changed, 1 insertion(+)
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git log
+commit 31dc539950091d3d43fc505ef48e3e58e861afcd (HEAD -> master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:33:39 2022 +0530
+
+    roll no modified
+
+commit ec177dcb48a1a61a84fba3d548ba6910fc1855d7
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:32:35 2022 +0530
+
+    roll no added
+
+commit 957b9f12bfda9b64ebbd4fb592f14d7762664f7f
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:31:56 2022 +0530
+
+    hotels.txt added
+
+commit 90d5472f318b4dfac4d1bbd8be1052e65d6a6936 (origin/master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 12:51:34 2022 +0530
+
+    names.txt file added
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+HELP -- Press RETURN for more, or q when done...skipping...
+commit 31dc539950091d3d43fc505ef48e3e58e861afcd (HEAD -> master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:33:39 2022 +0530
+
+    roll no modified
+
+commit ec177dcb48a1a61a84fba3d548ba6910fc1855d7
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:32:35 2022 +0530
+
+    roll no added
+
+commit 957b9f12bfda9b64ebbd4fb592f14d7762664f7f
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:31:56 2022 +0530
+
+    hotels.txt added
+
+commit 90d5472f318b4dfac4d1bbd8be1052e65d6a6936 (origin/master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 12:51:34 2022 +0530
+
+    names.txt file added
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 625 bytes | 34.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/pramit026/git-tutorial.git
+   90d5472..31dc539  master -> master
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git log
+commit 31dc539950091d3d43fc505ef48e3e58e861afcd (HEAD -> master, origin/master)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:33:39 2022 +0530
+
+    roll no modified
+
+commit ec177dcb48a1a61a84fba3d548ba6910fc1855d7
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:32:35 2022 +0530
+
+    roll no added
+
+commit 957b9f12bfda9b64ebbd4fb592f14d7762664f7f
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 13:31:56 2022 +0530
+
+    hotels.txt added
+
+commit 90d5472f318b4dfac4d1bbd8be1052e65d6a6936
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 12:51:34 2022 +0530
+
+    names.txt file added
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ git clone https://github.com/pramit026/commclassroomOP.git
+Cloning into 'commclassroomOP'...
+remote: Enumerating objects: 43, done.
+remote: Total 43 (delta 0), reused 0 (delta 0), pack-reused 43
+Receiving objects: 100% (43/43), 10.87 KiB | 505.00 KiB/s, done.
+Resolving deltas: 100% (9/9), done.
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project (master)
+$ cd commclassroomOP/
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ cat README.md
+# Community Classroom is OP
+
+- Kunal Kushwaha says that this community is amazing.
+- Kunal made this change
+- I love MLH
+- More power to kunal. love the work which your are doing for the community.
+- Anirudh Sharma finds the Community Classroom initiative really great!
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git remote add upstream https://github.com/commclassroom/commclassroomOP.git
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git remote -v
+origin  https://github.com/pramit026/commclassroomOP.git (fetch)
+origin  https://github.com/pramit026/commclassroomOP.git (push)
+upstream        https://github.com/commclassroom/commclassroomOP.git (fetch)
+upstream        https://github.com/commclassroom/commclassroomOP.git (push)
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ vi README.md
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git branch pramit
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git checkout pramit
+Switched to branch 'pramit'
+M       README.md
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (pramit)
+$ git add .
+g
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (pramit)
+$ git commit -m "pramit added a message"
+[pramit d8ae545] pramit added a message
+ 1 file changed, 1 insertion(+)
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (pramit)
+$ git log
+commit d8ae545cb443e8e2d70c2e97bcf03f772b4cb696 (HEAD -> pramit)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 18:33:32 2022 +0530
+
+    pramit added a message
+
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (origin/main, origin/HEAD, main)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (pramit)
+$ git push origin pramit
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 145.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'pramit' on GitHub by visiting:
+remote:      https://github.com/pramit026/commclassroomOP/pull/new/pramit
+remote:
+To https://github.com/pramit026/commclassroomOP.git
+ * [new branch]      pramit -> pramit
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (pramit)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git fetch -all --prune
+error: did you mean `--all` (with two dashes)?
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git fetch --all --prune
+Fetching origin
+Fetching upstream
+From https://github.com/commclassroom/commclassroomOP
+ * [new branch]      main       -> upstream/main
+ * [new branch]      rahul      -> upstream/rahul
+ * [new branch]      rahul-1    -> upstream/rahul-1
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$  git reset --hard upstream/main
+HEAD is now at 9a403b6 Merge pull request #664 from kunal-kushwaha/temp
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git log
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, origin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+gin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+gin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (upstream/rahul-1, origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &pattern          *  Display only matching lines
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+        ^R       Don't use REGULAR EXPRESSIONS.
+ ---------------------------------------------------------------------------
+
+                           JUMPING
+
+  g  <  ESC-<       *  Go to first line in file (or line N).
+  G  >  ESC->       *  Go to last line in file (or line N).
+  p  %              *  Go to beginning of file (or N percent into file).
+  t                 *  Go to the (N-th) next tag.
+  T                 *  Go to the (N-th) previous tag.
+  {  (  [           *  Find close bracket } ) ].
+  }  )  ]           *  Find open bracket { ( [.
+  ESC-^F <c1> <c2>  *  Find close bracket <c2>.
+  ESC-^B <c1> <c2>  *  Find open bracket <c1>
+        ---------------------------------------------------
+        Each "find close bracket" command goes forward to the close bracket
+          matching the (N-th) open bracket in the top line.
+        Each "find open bracket" command goes backward to the open bracket
+          matching the (N-th) close bracket in the bottom line.
+
+  m<letter>            Mark the current top line with <letter>.
+  M<letter>            Mark the current bottom line with <letter>.
+  '<letter>            Go to a previously marked position.
+  ''                   Go to the previous position.
+  ^X^X                 Same as '.
+  ESC-M<letter>        Clear a mark.
+        ---------------------------------------------------
+        A mark is any upper-case or lower-case letter.
+        Certain marks are predefined:
+             ^  means  beginning of the file
+             $  means  end of the file
+ ---------------------------------------------------------------------------
+
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &pattern          *  Display only matching lines
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+HELP -- Press RETURN for more, or q when done...skipping...
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+gin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+gin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &pattern          *  Display only matching lines
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+        ^R       Don't use REGULAR EXPRESSIONS.
+ ---------------------------------------------------------------------------
+
+                           JUMPING
+
+  g  <  ESC-<       *  Go to first line in file (or line N).
+  G  >  ESC->       *  Go to last line in file (or line N).
+  p  %              *  Go to beginning of file (or N percent into file).
+  t                 *  Go to the (N-th) next tag.
+  T                 *  Go to the (N-th) previous tag.
+  {  (  [           *  Find close bracket } ) ].
+  }  )  ]           *  Find open bracket { ( [.
+  ESC-^F <c1> <c2>  *  Find close bracket <c2>.
+  ESC-^B <c1> <c2>  *  Find open bracket <c1>
+        ---------------------------------------------------
+        Each "find close bracket" command goes forward to the close bracket
+          matching the (N-th) open bracket in the top line.
+        Each "find open bracket" command goes backward to the open bracket
+          matching the (N-th) close bracket in the bottom line.
+
+  m<letter>            Mark the current top line with <letter>.
+  M<letter>            Mark the current bottom line with <letter>.
+  '<letter>            Go to a previously marked position.
+  ''                   Go to the previous position.
+  ^X^X                 Same as '.
+  ESC-M<letter>        Clear a mark.
+        ---------------------------------------------------
+        A mark is any upper-case or lower-case letter.
+        Certain marks are predefined:
+             ^  means  beginning of the file
+             $  means  end of the file
+ ---------------------------------------------------------------------------
+
+                        CHANGING FILES
+
+  :e [file]            Examine a new file.
+  ^X^V                 Same as :e.
+  :n                *  Examine the (N-th) next file from the command line.
+  :p                *  Examine the (N-th) previous file from the command line.
+  :x                *  Examine the first (or N-th) file from the command line.
+  :d                   Delete the current file from the command line list.
+  =  ^G  :f            Print current file name.
+ ---------------------------------------------------------------------------
+
+                    MISCELLANEOUS COMMANDS
+
+  -<flag>              Toggle a command line option [see OPTIONS below].
+  --<name>             Toggle a command line option, by name.
+  _<flag>              Display the setting of a command line option.
+  __<name>             Display the setting of an option, by name.
+  +cmd                 Execute the less cmd each time a new file is examined.
+
+  !command             Execute the shell command with $SHELL.
+  |Xcommand            Pipe file between current pos & mark X to shell command.
+  s file               Save input to a file.
+  v                    Edit the current file with $VISUAL or $EDITOR.
+  V                    Print version number of "less".
+ ---------------------------------------------------------------------------
+
+                           OPTIONS
+
+        Most options may be changed either on the command line,
+        or from within less by using the - or -- command.
+        Options may be given in one of two forms: either a single
+        character preceded by a -, or a name preceded by --.
+
+  -?  ........  --help
+                  Display help (from command line).
+  -a  ........  --search-skip-screen
+                  Search skips current screen.
+  -A  ........  --SEARCH-SKIP-SCREEN
+                  Search starts just after target line.
+  -b [N]  ....  --buffers=[N]
+                  Number of buffers.
+  -B  ........  --auto-buffers
+                  Don't automatically allocate buffers for pipes.
+  -c  ........  --clear-screen
+                  Repaint by clearing rather than scrolling.
+  -d  ........  --dumb
+                  Dumb terminal.
+  -D [xn.n]  .  --color=xn.n
+                  Set screen colors. (MS-DOS only)
+  -e  -E  ....  --quit-at-eof  --QUIT-AT-EOF
+                  Quit at end of file.
+  -f  ........  --force
+                  Force open non-regular files.
+  -F  ........  --quit-if-one-screen
+                  Quit if entire file fits on first screen.
+  -g  ........  --hilite-search
+                  Highlight only last match for searches.
+  -G  ........  --HILITE-SEARCH
+                  Don't highlight any matches for searches.
+  -h [N]  ....  --max-back-scroll=[N]
+                  Backward scroll limit.
+  -i  ........  --ignore-case
+                  Ignore case in searches that do not contain uppercase.
+  -I  ........  --IGNORE-CASE
+                  Ignore case in all searches.
+  -j [N]  ....  --jump-target=[N]
+                  Screen position of target lines.
+  -J  ........  --status-column
+                  Display a status column at left edge of screen.
+  -k [file]  .  --lesskey-file=[file]
+                  Use a lesskey file.
+  -K  ........  --quit-on-intr
+                  Exit less in response to ctrl-C.
+  -L  ........  --no-lessopen
+                  Ignore the LESSOPEN environment variable.
+  -m  -M  ....  --long-prompt  --LONG-PROMPT
+                  Set prompt style.
+  -n  -N  ....  --line-numbers  --LINE-NUMBERS
+                  Don't use line numbers.
+  -o [file]  .  --log-file=[file]
+                  Copy to log file (standard input only).
+  -O [file]  .  --LOG-FILE=[file]
+                  Copy to log file (unconditionally overwrite).
+  -p [pattern]  --pattern=[pattern]
+                  Start at pattern (from command line).
+  -P [prompt]   --prompt=[prompt]
+                  Define new prompt.
+  -q  -Q  ....  --quiet  --QUIET  --silent --SILENT
+                  Quiet the terminal bell.
+  -r  -R  ....  --raw-control-chars  --RAW-CONTROL-CHARS
+                  Output "raw" control characters.
+  -s  ........  --squeeze-blank-lines
+                  Squeeze multiple blank lines.
+  -S  ........  --chop-long-lines
+                  Chop (truncate) long lines rather than wrapping.
+  -t [tag]  ..  --tag=[tag]
+                  Find a tag.
+  -T [tagsfile] --tag-file=[tagsfile]
+                  Use an alternate tags file.
+  -u  -U  ....  --underline-special  --UNDERLINE-SPECIAL
+                  Change handling of backspaces.
+  -V  ........  --version
+                  Display the version number of "less".
+  -w  ........  --hilite-unread
+                  Highlight first new line after forward-screen.
+  -W  ........  --HILITE-UNREAD
+                  Highlight first new line after any forward movement.
+  -x [N[,...]]  --tabs=[N[,...]]
+                  Set tab stops.
+  -X  ........  --no-init
+                  Don't use termcap init/deinit strings.
+  -y [N]  ....  --max-forw-scroll=[N]
+                  Forward scroll limit.
+  -z [N]  ....  --window=[N]
+                  Set size of window.
+  -" [c[c]]  .  --quotes=[c[c]]
+                  Set shell quote characters.
+HELP -- Press RETURN for more, or q when done...skipping...
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, origin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &pattern          *  Display only matching lines
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+HELP -- Press RETURN for more, or q when done...skipping...
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, origin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+Merge: 789c476 5905d9a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (upstream/rahul-1, origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+...skipping...
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (upstream/rahul-1, origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+...skipping...
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (upstream/rahul-1, origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+...skipping...
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (upstream/rahul-1, origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+...skipping...
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+gin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (upstream/rahul-1, origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+set mark: ...skipping...
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (upstream/rahul-1, origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+set mark: ...skipping...
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+gin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (HEAD -> main, upstream/main, origin/main, ori
+gin/HEAD)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+
+commit 9f573b6cb721ca734b183a29bd577722804901ef
+Merge: e134a1e 0d9e167
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:20 2021 +0530
+
+    Merge branch 'main' into greeting
+
+commit 0d9e16703d23abada8605d45091d0d90adbfc299
+Merge: 642eabd 8b41812
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:34:59 2021 +0530
+
+    Merge pull request #27 from AnirudhBot/Anirudh_Sharma
+
+    Anirudh modified readme
+
+commit e134a1e374a669bfcd138cf139eae576240f89a4
+Author: Manish Rawat <github.jmtss@gmail.com>
+Date:   Sun Aug 1 18:31:24 2021 +0530
+
+    greetings
+
+commit 8b41812b3dbd43755ca986b0e37dfe0314e2134e
+Author: Anirudh Sharma <anirudh1304@gmail.com>
+Date:   Sun Aug 1 18:15:04 2021 +0530
+
+    Anirudh modified readme
+
+    Anirudh modified readme
+
+commit 642eabdf4ffc3533bbbaaedd85a44be11700f924
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:08:12 2021 +0530
+
+    Update README.md
+
+commit 1bb5c8484b472a4c9b7fcd965faee2c5b3ea5a3e
+Merge: 97d9769 8da5685
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:39 2021 +0530
+
+    Merge pull request #3 from kunal-kushwaha/temp
+
+    kunal changed line 4
+
+commit 8da568584cee152751162a246296b419e11513e9
+Merge: 56039e8 97d9769
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:05:08 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 97d9769a65b87510116cdc64c897a9e3044c71de
+Merge: 5905d9a a53d10d
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:04:25 2021 +0530
+
+    Merge pull request #2 from commclassroom/rahul-1
+
+    rahul made changes in line 4
+
+commit 56039e8ffd189814b005a7cfa2e74c2aa8139055
+Merge: 789c476 5905d9a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:03:59 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit 789c476938d54cd61225df4da538907e3ca58aa8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:02:52 2021 +0530
+
+    kunal changed line 4
+
+commit a53d10d48f4e5af7c5d2089b02c22320e6204ee2 (upstream/rahul-1, origin/rahul-1)
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 13:01:58 2021 +0530
+
+    rahul made changes in line 4
+
+commit 5905d9a1b4a60efbdb39b1761787e7575694acda
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:53:44 2021 +0530
+
+    Update README.md
+
+commit 4f3b54bf569c9c7ed40c8c90e1c72d5e8ac46152
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:51:23 2021 +0530
+
+    Update README.md
+
+commit 8c87fa8e21004a64f325323be03f5208b323eb22
+Merge: 09306a1 a4e3d35
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:47:41 2021 +0530
+
+    Merge pull request #1 from kunal-kushwaha/kunal
+
+    Kunal added a message
+
+commit a4e3d35ee383fec2f2e6464d87bafc0423b4c9a0
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:37:04 2021 +0530
+
+    Kunal added a message
+
+commit 09306a141eb1756aaad4e3f32c362904aadd5235
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 12:31:24 2021 +0530
+
+    Create README.md
+q
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git push origin main
+Everything up-to-date
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git pull upstream main
+From https://github.com/commclassroom/commclassroomOP
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git push origin main
+Everything up-to-date
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git branch temp
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (main)
+$ git checkout temp
+Switched to branch 'temp'
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ touch 1
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ git add .; git commit -m "1"
+t[temp 99cff28] 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1
+ou
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ touch 2
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ git add .; git commit -m "3"
+[temp c3c9ef0] 3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ touch 3
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ git add .; git commit -m "no3"
+[temp 61afafd] no3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ git log
+commit 61afafd9ef04c0a4b4e5defdc346fef0191a8d30 (HEAD -> temp)
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 20:21:43 2022 +0530
+
+    no3
+
+commit c3c9ef0af31672d33f39fc662acf13aa1f9f6ba6
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 20:21:16 2022 +0530
+
+    3
+
+commit 99cff28b6782b266992ea025467aba9a59b79ecd
+Author: PramitSahoo <email_address>
+Date:   Wed Feb 9 20:20:53 2022 +0530
+
+    1
+
+commit 9a403b6a97ec00101908cf174ad0b2f5fce3ae96 (upstream/main, origin/main, origin/HEAD, main)
+Merge: 49f6657 6e35f5a
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:45 2021 +0530
+
+    Merge pull request #664 from kunal-kushwaha/temp
+
+    mlh op
+
+commit 6e35f5ae449577f3cf83cba543bc1ae80e2d779b
+Merge: a49f387 49f6657
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:58:39 2021 +0530
+
+    Merge branch 'main' into temp
+
+commit a49f38748d631b0823e569c324a3f50dfcc4a8d8
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Wed Oct 6 20:55:58 2021 +0530
+
+    mlh op
+
+commit 49f66576100aa1e9cfb436548c73adc3609d47bf
+Merge: 0d9e167 9f573b6
+Author: Kunal Kushwaha <kunalkushwaha453@gmail.com>
+Date:   Sun Aug 1 18:35:26 2021 +0530
+
+    Merge pull request #26 from R11manish/greeting
+
+    greetings
+q
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ git rebase -i 99cff28b6782b266992ea025467aba9a59b79ecd
+hint: Waiting for your editor to close the file...
+[main 2022-02-09T14:55:23.183Z] update#setState idle
+[main 2022-02-09T14:55:25.836Z] ExtensionHostStarterWorker created
+[main 2022-02-09T14:55:48.348Z] Starting extension host with pid 14916 (fork() took 419 ms).
+[main 2022-02-09T14:55:48.349Z] ExtensionHostStarterWorker.start() took 421 ms.
+[main 2022-02-09T14:55:53.245Z] update#setState checking for updates
+[main 2022-02-09T14:55:56.247Z] update#setState downloading
+[main 2022-02-09T14:58:39.627Z] update#setState updating
+[main 2022-02-09T15:00:38.993Z] update#setState ready
+q
+[main 2022-02-09T15:15:11.838Z] Waiting for extension host with pid 14916 to exit.
+[main 2022-02-09T15:15:11.949Z] Extension host with pid 14916 exited with code: 0, signal: null.
+Successfully rebased and updated refs/heads/temp.
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ q
+bash: q: command not found
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$ git push origin temp
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 579 bytes | 24.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'temp' on GitHub by visiting:
+remote:      https://github.com/pramit026/commclassroomOP/pull/new/temp
+remote:
+To https://github.com/pramit026/commclassroomOP.git
+ * [new branch]      temp -> temp
+
+as@DESKTOP-SPUF094 MINGW64 /g/git-tutorial/project/commclassroomOP (temp)
+$
